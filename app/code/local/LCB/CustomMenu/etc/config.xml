@@ -51,6 +51,15 @@
             </lcb_custommenu_read>
         </resources>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <faq>
+                    <file>custommenu.xml</file>
+                </faq>
+            </updates>
+        </layout>
+    </frontend>
     <admin>
         <routers>
             <custommenu>

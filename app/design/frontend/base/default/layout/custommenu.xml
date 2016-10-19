@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <default>
+        <reference name="catalog.topnav">
+            <block type="custommenu/links" name="custommenu.links" template="custommenu/links.phtml" as="links"/>
+        </reference>
+    </default>
+    
+</layout>
