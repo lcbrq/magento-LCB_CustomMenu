@@ -1,0 +1,31 @@
+{
+    "name": "lcb/custommenu",
+    "description": "Custom Menu",
+    "keywords": ["magento", "menu","toplinks", "checkout"],
+    "homepage": "http://lcbrq.com/",
+    "type": "magento-module",
+    "license":"GNU V3",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Marcin Gierus",
+            "email": "martin@lcbrq.com"
+        },
+		{
+			"name": "Tomasz Gregorczyk",
+			"email": "tom@lcbrq.com"
+		}
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "magento-root-dir": "./",
+        "magento-deploystrategy": "copy",
+        "map": [
+            ["app/code/local/LCB/CustomMenu", "app/code/local/LCB/CustomMenu"],
+            ["app/etc/modules/LCB_CustomMenu.xml", "app/etc/modules/LCB_CustomMenu.xml"],
+            ["app/design/adminhtml/default/default/layout/custommenu.xml", "app/design/adminhtml/default/default/layout/custommenu.xml"]
+        ]       
+    }
+}
