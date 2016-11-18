@@ -9,7 +9,7 @@ foreach ($links as $link) {
 
     <?php $levelIndex = 1; ?>
 
-    <li class="level0 nav-<?php echo $levelIndes; ?> level-top"><a href="<?php echo $link->getUrl(); ?>" class="level-top">
+    <li class="level0 nav-<?php echo $levelIndex; ?> level-top"><a href="<?php echo $link->getUrl(); ?>" class="level-top">
             <span><?php echo $link->getName() ?></span>
             <?php $levelIndex++; ?>
         </a>
