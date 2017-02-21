@@ -37,6 +37,16 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Grid extends Mage_Adminhtml_Block_Wid
             "index" => "value",
         ));
 
+        $this->addColumn("type", array(
+            "header" => Mage::helper("custommenu")->__("Type"),
+            "index" => "type_id",
+        ));
+
+        $this->addColumn("Image", array(
+            "header" => Mage::helper("custommenu")->__("Image"),
+            "index" => "image",
+        ));
+
         return parent::_prepareColumns();
     }
 

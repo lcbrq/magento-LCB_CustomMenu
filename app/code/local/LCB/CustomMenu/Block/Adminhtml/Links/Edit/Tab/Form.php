@@ -4,7 +4,10 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Edit_Tab_Form extends Mage_Adminhtml_
     protected function _prepareForm()
     {
 
-        $form = new Varien_Data_Form();
+        $form = new Varien_Data_Form(array(
+            'method' => 'post',
+            'enctype' => 'multipart/form-data'
+            ));
         $this->setForm($form);
         $fieldset = $form->addFieldset("custommenu_form", array("legend" => Mage::helper("custommenu")->__("Item information")));
 
@@ -20,6 +23,23 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Edit_Tab_Form extends Mage_Adminhtml_
             "class"    => "required-entry",
             "required" => true,
             "name"     => "value",
+        ));
+
+        $afterElementHtml = '<p><small>' . ' Chose 1 to show in top links , chose 2 for faq link ' . '</small></p>';
+
+        $fieldset->addField("type_id", "select", array(
+            "label"    => Mage::helper("custommenu")->__("Type"),
+            "class"    => "required-entry",
+            "required" => true,
+            "values"   => array('1'=>1,'2'=>2),
+            "name"     => "type_id",
+            "after_element_html"=> $afterElementHtml
+        ));
+
+         $fieldset->addField('image', 'file', array(
+            'label'     => Mage::helper("custommenu")->__('Image'),
+            'required'  => false,
+            'name'      => 'image',
         ));
 
         if (Mage::getSingleton("adminhtml/session")->getLinksData()) {
