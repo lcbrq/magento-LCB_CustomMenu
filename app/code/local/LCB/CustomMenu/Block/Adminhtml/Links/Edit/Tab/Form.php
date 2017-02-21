@@ -25,7 +25,7 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Edit_Tab_Form extends Mage_Adminhtml_
             "name"     => "value",
         ));
 
-        $afterElementHtml = '<p><small>' . Mage::helper('lcb/custommenu')->__('Chose 1 to show in top links , chose 2 for faq link' . '</small></p>';
+        $afterElementHtml = '<p><small>' . $this->__('Chose 1 to show in top links , chose 2 for faq link') . '</small></p>';
 
         $fieldset->addField("type_id", "select", array(
             "label"    => Mage::helper("custommenu")->__("Type"),
