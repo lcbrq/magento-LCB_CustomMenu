@@ -25,13 +25,13 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Edit_Tab_Form extends Mage_Adminhtml_
             "name"     => "value",
         ));
 
-        $afterElementHtml = '<p><small>' . ' Chose 1 to show in top links , chose 2 for faq link ' . '</small></p>';
+        $afterElementHtml = '<p><small>' . Mage::helper('lcb/custommenu')->__('Chose 1 to show in top links , chose 2 for faq link' . '</small></p>';
 
         $fieldset->addField("type_id", "select", array(
             "label"    => Mage::helper("custommenu")->__("Type"),
             "class"    => "required-entry",
             "required" => true,
-            "values"   => array('1'=>1,'2'=>2),
+            "values"   => array(1 => 'Topmenu', 2 => 'Faq'),
             "name"     => "type_id",
             "after_element_html"=> $afterElementHtml
         ));

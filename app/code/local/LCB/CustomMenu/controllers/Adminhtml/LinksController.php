@@ -80,23 +80,22 @@ class LCB_CustomMenu_Adminhtml_LinksController extends Mage_Adminhtml_Controller
 
                 if(isset($_FILES['image']['name']) and (file_exists($_FILES['image']['tmp_name']))) {
                     try {
+
                         $uploader = new Varien_File_Uploader('image');
                         $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png')); 
-  
                         $uploader->setAllowRenameFiles(false);
-                        
                         $uploader->setFilesDispersion(false);
-    
                         $path = Mage::getBaseDir('media') . DS ;
-                
                         $uploader->save($path, $_FILES['image']['name']);
-  
                         $post_data['image'] = $_FILES['image']['name'];
+
                     }catch(Exception $e) {
+
                         Mage::getSingleton("adminhtml/session")->addError($e->getMessage());
                         Mage::getSingleton("adminhtml/session")->setLinksData($this->getRequest()->getPost());
                         $this->_redirect("*/*/edit", array("id" => $this->getRequest()->getParam("id")));
                         return;
+                        
                     }
                 } 
 
