@@ -54,9 +54,9 @@
     <frontend>
         <layout>
             <updates>
-                <faq>
+                <lcb_custommenu>
                     <file>custommenu.xml</file>
-                </faq>
+                </lcb_custommenu>
             </updates>
         </layout>
     </frontend>
