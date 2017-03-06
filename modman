@@ -1,0 +1,5 @@
+app/code/local/LCB/CustomMenu  app/code/local/LCB/CustomMenu
+app/code/design/adminhtml/default/default/layout/custommenu.xml	app/code/design/adminhtml/default/default/layout/custommenu.xml
+app/code/design/frontend/base/default/layout/custommenu.xml	app/code/design/frontend/base/default/layout/custommenu.xml
+app/code/design/frontend/base/default/template/custommenu/index.phtml	app/code/design/frontend/base/default/template/custommenu/index.phtml
+app/etc/modules/LCB_CustomMenu.xml	app/etc/modules/LCB_CustomMenu.xml	
