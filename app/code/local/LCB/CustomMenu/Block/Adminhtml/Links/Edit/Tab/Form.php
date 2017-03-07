@@ -18,22 +18,21 @@ class LCB_CustomMenu_Block_Adminhtml_Links_Edit_Tab_Form extends Mage_Adminhtml_
             "name"     => "name",
         ));
 
+        $afterElementHtml = '<p><small>' . $this->__('Url is required for Topmenu and Faq link type') . '</small></p>';
+
         $fieldset->addField("value", "text", array(
             "label"    => Mage::helper("custommenu")->__("Url"),
-            "class"    => "required-entry",
-            "required" => true,
             "name"     => "value",
+            "after_element_html"=> $afterElementHtml
         ));
 
-        $afterElementHtml = '<p><small>' . $this->__('Chose 1 to show in top links , chose 2 for faq link') . '</small></p>';
 
         $fieldset->addField("type_id", "select", array(
             "label"    => Mage::helper("custommenu")->__("Type"),
             "class"    => "required-entry",
             "required" => true,
-            "values"   => array(1 => 'Topmenu', 2 => 'Faq'),
-            "name"     => "type_id",
-            "after_element_html"=> $afterElementHtml
+            "values"   => array(1 => 'Topmenu', 2 => 'Faq',3=>'Certificate'),
+            "name"     => "type_id"
         ));
 
          $fieldset->addField('image', 'file', array(

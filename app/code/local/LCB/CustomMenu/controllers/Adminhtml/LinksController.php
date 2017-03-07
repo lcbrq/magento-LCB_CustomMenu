@@ -98,13 +98,12 @@ class LCB_CustomMenu_Adminhtml_LinksController extends Mage_Adminhtml_Controller
                         
                     }
                 } 
-
+                
 
                 $model = Mage::getModel("custommenu/links")
                         ->addData($post_data)
                         ->setId($this->getRequest()->getParam("id"))
                         ->save();
-
                 Mage::getSingleton("adminhtml/session")->addSuccess(Mage::helper("adminhtml")->__("Links was successfully saved"));
                 Mage::getSingleton("adminhtml/session")->setLinksData(false);
 
