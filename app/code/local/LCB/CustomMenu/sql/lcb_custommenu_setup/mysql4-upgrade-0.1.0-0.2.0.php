@@ -2,7 +2,7 @@
 
 /**
  * Add image column to lcb_custommenu_links table
- * @author Jigsaw Marcin Gieurs <martin@silpion.io>
+ * @author Jigsaw Marcin Gierus <martin@silpion.io>
  */
 $installer = $this;
 $installer->startSetup();
